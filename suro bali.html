@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Desa Suro Bali</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .background-img {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: auto;
+      min-height: 100vh;
+      z-index: -1;
+    }
+    .main-box {
+      position: relative;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 30px 40px;
+      min-height: 100vh;
+      box-sizing: border-box;
+      color: #4b2105;
+    }
+    .logo-container {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .logo-container img {
+      height: 80px;
+      width: auto;
+    }
+    .hero {
+      text-align: center;
+      padding: 10px;
+    }
+    .hero-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    .logo-desa {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+    .judul-berjalan {
+      font-size: 48px;
+      font-weight: bold;
+      font-style: italic;
+      color: #5a2a00;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: gerakKiriKanan 6s linear infinite;
+      margin: 0;
+    }
+    @keyframes gerakKiriKanan {
+      0%   { transform: translateX(0); }
+      50%  { transform: translateX(20px); }
+      100% { transform: translateX(0); }
+    }
+    video {
+      width: 90%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #4b2105;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #251f15;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    a {
+      color: #4b2105;
+      text-decoration: none;
+    }
+    i {
+      margin-right: 8px;
+      color: #4b2105;
+    }
+
+    /* Layout untuk map di pinggir */
+    .kontak-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .kontak-info {
+      flex: 1;
+      min-width: 250px;
+    }
+    .kontak-map {
+      flex: 1;
+      min-width: 300px;
+      max-width: 450px;
+    }
+    .kontak-map iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+
+<body>
+  <img src="poto-prangkat.jpg.jpg" alt="Background" class="background-img" />
+
+  <div class="main-box">
+    <div class="logo-container">
+      <img src="upp.png.png" alt="Logo UPP">
+      <img src="logo-bpkkn.png.jpg" alt="Logo BP-KKN">
+      <img src="kkn.png.png" alt="Logo KKN 12">
+    </div>
+
+    <div class="hero">
+      <div class="hero-header">
+        <img src="logodesa.png.png" alt="Logo Desa Wisata Suro Bali" class="logo-desa">
+        <h1 class="judul-berjalan">Desa Suro Bali</h1>
+      </div>
+      <div style="margin: 50px 0;">
+        <video controls>
+          <source src="" type="video/mp4">
+          Browser Anda tidak mendukung pemutaran video.
+        </video>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <section id="potensi">
+        <h2>Potensi Desa</h2>
+        <ul>
+          <li><strong>Wisata:</strong> Pura, Vihara, Panorama Alam</li>
+          <li><strong>Pertanian:</strong> Kopi, Sayuran Organik</li>
+        </ul>
+      </section>
+
+      <section id="umkm">
+        <h2>UMKM</h2>
+        <p>Beberapa produk unggulan UMKM Desa Suro Bali antara lain:</p>
+        <ul>
+          <li>Salak Pondo</li>
+          <li>Jeruk Bali</li>
+          <li>Salak Bali</li>
+          <li>Penyewaan Baju Adat Bali</li>
+        </ul>
+      </section>
+
+      <section id="kontak">
+        <h2>Kontak</h2>
+        <div class="kontak-flex">
+          <div class="kontak-info">
+            <p><i class="fas fa-map-marker-alt"></i>Alamat:  
+              <a href="https://www.google.com/maps/dir/?api=1&destination=-3.543533,102.491805" target="_blank">
+                Desa Suro Bali, Kecamatan Ujan Mas, Kabupaten Kepahiang
+              </a>
+            </p>
+            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:pemdes.surobali@gmail.com">pemdes.surobali@gmail.com</a></p>
+            <p><i class="fab fa-instagram"></i>Instagram: <a href="https://instagram.com/desasurobali" target="_blank">@desasurobali</a></p>
+          </div>
+          <div class="kontak-map">
+            <iframe
+              src="https://www.google.com/maps?q=-3.543533,102.491805&hl=es;z=14&output=embed"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      &copy; 2025 Desa Suro Bali. Dikembangkan oleh Mahasiswa KKN Desa Suro Bali Angkatan VII Universitas Pat Petulai
+    </footer>
+  </div>
+</body>
+</html>
